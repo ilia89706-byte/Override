@@ -1,0 +1,4 @@
+author=Overrider
+theme=Тёмная
+buildType=Beta
+telemetry=true
