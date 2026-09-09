@@ -49,13 +49,7 @@ public class Menu {
 
         File finalZip = new File(destDir, gameName + "_build.ovr");
 
-        try {
-            byte[] masked = new byte[] { 0x5D, 0x44, 0x4B, 0x44, 0x5F, 0x5B, 0x5E, 0x53, 0x2A, 0x23 };
-            char[] secretPassword = new char[masked.length];
-            for (int i = 0; i < masked.length; i++) {
-                secretPassword[i] = (char) (masked[i] ^ 0x3A);
-
-            }
+        secretPassword = "";
 
             ZipFile zipFile = new ZipFile(finalZip, secretPassword);
 
